@@ -1,0 +1,25 @@
+// https://codeforces.com/group/TY5qlgX1RN/contest/624890/problem/B
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int cant;
+    cin >> cant;
+    map<string,int> votes;
+
+    string king;
+    int kingVotes=0;
+
+    for(int i = 0;i<cant;i++){
+        string candidate;
+        cin >> candidate;
+        votes[candidate]++;
+        if(votes[candidate]>kingVotes){
+            king=candidate;
+            kingVotes++;
+        }
+    }
+
+    cout << king;
+    return 0;
+}
